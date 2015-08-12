@@ -22,18 +22,6 @@ get_header(); ?>
 				<?php echo do_shortcode('[wonderplugin_slider id="1"]'); ?>
 			</div>
 			<br>
-			<?php //if ( have_posts() ) : ?>
-
-				<?php /* The loop */ ?>
-				<?php //while ( have_posts() ) : the_post(); ?>
-					<?php //get_template_part( 'content', get_post_format() ); ?>
-				<?php //endwhile; ?>
-
-				<?php //twentythirteen_paging_nav(); ?>
-
-			<?php //else : ?>
-				<?php //get_template_part( 'content', 'none' ); ?>
-			<?php //endif; ?>
 			<div class="post-slider">
 				<?php echo do_shortcode('[advps-slideshow optset="1"]'); ?>
 			</div>
