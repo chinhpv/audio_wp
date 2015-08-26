@@ -105,6 +105,9 @@ function twentythirteen_setup() {
 
 	// This theme uses its own gallery styles.
 	add_filter( 'use_default_gallery_style', '__return_false' );
+
+	wp_enqueue_style( 'boostrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css');
+	wp_enqueue_style( 'boostrap', get_template_directory_uri() . '/css/bootstrap/bootstrap-theme.min.css');
 }
 add_action( 'after_setup_theme', 'twentythirteen_setup' );
 
@@ -550,3 +553,19 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20141120', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+
+register_sidebar(array(
+    'name' => 'Right sidebar',
+    'id' => 'right-sidebar',
+    'description' => 'Khu vực sidebar bên phải page ',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h1 class="widget-title">',
+    'after_title' => '</h1>'
+));
+
+function add_bootstrap() {
+	wp_enqueue_style( 'boostrap', get_template_directory_uri() . '/css/bootstrap/boostrap.min.css');
+}
+
+add_action( 'wp_enqueue_style', 'add_bootstrap' );

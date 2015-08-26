@@ -788,6 +788,7 @@ img.wp-smiley,
 
 .site-main {
 	position: relative;
+	margin: 0 20px;
 }
 
 .site-main .sidebar-container {
@@ -3225,3 +3226,40 @@ footer.entry-meta {
 		color: #333;
 	}
 }
+
+.clear {
+	clear: both;
+}
+.right-sidebar {
+	float: left;
+	width: 18%;
+	margin-left: 10px;
+	box-shadow: 2px 3px 5px #333;
+	height: 100%;
+}
+
+.slideshow {
+	width: 80%;
+	float: left;
+	box-shadow: 2px 3px 5px #333;
+}
+.mid-content {
+	margin: 10px 0;
+	min-height: 300px;
+}
+
+.post-slider {
+	margin-bottom: 20px;
+}
+
+.post-slider .title-slider {
+	width: 100%;
+	background-color: #333;
+	color: white;
+	line-height: 30px;
+	padding: 10px;
+	margin: 5px 0;
+}
+
+/* style for home page*/
+

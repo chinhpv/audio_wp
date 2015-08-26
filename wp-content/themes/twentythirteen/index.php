@@ -17,14 +17,30 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main" style="padding:20px;">
-			<div class="slide-show" style="margin-bottom: 20px;">
-				<?php echo do_shortcode('[wonderplugin_slider id="1"]'); ?>
+		<div id="content" class="site-content" role="main">
+			<div class="mid-content" style="margin-bottom: 20px;">
+				<div class="slideshow">
+					<?php echo do_shortcode('[wonderplugin_slider id="1"]'); ?>
+				</div>
+				<div class="right-sidebar">
+					<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
+	                	<?php dynamic_sidebar( 'right-sidebar' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="clear"></div>
 			</div>
 			<br>
 			<div class="post-slider">
-				<?php echo do_shortcode('[advps-slideshow optset="1"]'); ?>
+				<div class="title-slider">
+					Sản phẩm mới
+				</div>
+				<div class="new-product">
+				<?php
+					echo do_shortcode('[jigoshop_product_list]');
+				?>
+				</div>
 			</div>
+
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
